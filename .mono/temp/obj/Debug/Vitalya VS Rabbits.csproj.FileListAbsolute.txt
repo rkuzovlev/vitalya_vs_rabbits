@@ -1,0 +1,8 @@
+/Users/nixel/dev/gamedev/Vitalya VS Rabbits/.mono/temp/bin/Debug/Vitalya VS Rabbits.dll
+/Users/nixel/dev/gamedev/Vitalya VS Rabbits/.mono/temp/bin/Debug/Vitalya VS Rabbits.pdb
+/Users/nixel/dev/gamedev/Vitalya VS Rabbits/.mono/temp/obj/Debug/Vitalya VS Rabbits.csprojAssemblyReference.cache
+/Users/nixel/dev/gamedev/Vitalya VS Rabbits/.mono/temp/obj/Debug/Vitalya VS Rabbits.csproj.CoreCompileInputs.cache
+/Users/nixel/dev/gamedev/Vitalya VS Rabbits/.mono/temp/obj/Debug/Vitalya VS Rabbits.AssemblyInfoInputs.cache
+/Users/nixel/dev/gamedev/Vitalya VS Rabbits/.mono/temp/obj/Debug/Vitalya VS Rabbits.AssemblyInfo.cs
+/Users/nixel/dev/gamedev/Vitalya VS Rabbits/.mono/temp/obj/Debug/Vitalya VS Rabbits.dll
+/Users/nixel/dev/gamedev/Vitalya VS Rabbits/.mono/temp/obj/Debug/Vitalya VS Rabbits.pdb

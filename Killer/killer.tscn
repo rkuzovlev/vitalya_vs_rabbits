@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Killer/killer.png" type="Texture" id=1]
+[ext_resource path="res://Killer/Killer.cs" type="Script" id=3]
+
+[node name="Killer" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Killer" type="Sprite" parent="."]
+position = Vector2( 0, 0.373016 )
+texture = ExtResource( 1 )
+offset = Vector2( 90, 96 )

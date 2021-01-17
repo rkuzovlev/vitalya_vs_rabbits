@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Killer/KillMethods/LaserBeam/LaserBeam.cs" type="Script" id=1]
+[ext_resource path="res://Killer/KillMethods/LaserBeam/particle_texture.png" type="Texture" id=2]
+[ext_resource path="res://Killer/KillMethods/LaserBeam/laster_texture.png" type="Texture" id=3]
+[ext_resource path="res://Killer/KillMethods/LaserBeam/laser.ogg" type="AudioStream" id=4]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0.95946 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 14.83
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_curve = SubResource( 2 )
+color = Color( 1, 0.396078, 0.235294, 1 )
+
+[node name="LaserBeam" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="BeginParticles" type="Particles2D" parent="."]
+position = Vector2( 0, 0.0433502 )
+amount = 20
+process_material = SubResource( 3 )
+texture = ExtResource( 2 )
+
+[node name="EndParticles" type="Particles2D" parent="."]
+position = Vector2( 227.988, -0.587326 )
+amount = 20
+process_material = SubResource( 3 )
+texture = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Line" type="Line2D" parent="."]
+position = Vector2( 0, 0.0433502 )
+points = PoolVector2Array( 0, 0, 228.661, 0 )
+default_color = Color( 1, 0, 0.141176, 1 )
+texture = ExtResource( 3 )
+texture_mode = 2
+__meta__ = {
+"_editor_description_": " "
+}
+
+[node name="SoundEffect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+[connection signal="tween_all_completed" from="Tween" to="." method="OnTweenAllCompleted"]
+[connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]

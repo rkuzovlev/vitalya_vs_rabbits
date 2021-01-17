@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://menu/rabbit/rabbit_body_menu.png" type="Texture" id=1]
+[ext_resource path="res://menu/rabbit/rabbit_head_menu.png" type="Texture" id=2]
+[ext_resource path="res://menu/rabbit/RabbitMenu.cs" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Headbanging"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("rabbit_head_menu:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 10.9, 0.0 ]
+}
+
+[node name="RabbitMenu" type="Node2D"]
+position = Vector2( -3.44818, 18.7964 )
+script = ExtResource( 3 )
+
+[node name="rabbit_body_menu" type="Sprite" parent="."]
+position = Vector2( 8.36006, 36.0083 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 1 )
+
+[node name="rabbit_head_menu" type="Sprite" parent="."]
+position = Vector2( 2.26793, -5.95538 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+offset = Vector2( -8, -36 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 2.33
+anims/Headbanging = SubResource( 1 )
